@@ -1,0 +1,64 @@
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Cadastro de Cliente</title>
+    
+    <script type="text/javascript" src="js.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="bootstrap/css/signin.css" rel="stylesheet">
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+       <form class="form-signin" name="form1" onsubmit="return valida()" action="http://www.google.com.br/" method="post" >
+        <h2 class="form-signin-heading">Cadastro de Cliente</h2>
+        
+        <label for="cpf">CPF</label>
+        <input class="form-control" type='text' id="cpf" name='cpf' size="20" maxlength="14" onkeypress='mascara(this,cpfMascara)' onblur='clearTimeout()'>
+        
+        <label for="endereco">Nome</label>
+        <input class="form-control" id="nome"  type="text" name="nome" size="35" required="required" onkeyup="apenasMaiuscula(this)" />
+        
+        <label for="endereco">Endereço</label>
+        <input class="form-control" id="endereco" required="required" type="text" name="endereco" size="35" onkeyup="apenasMaiuscula(this)" />
+    
+        <label for="cidade">Cidade</label>
+        <input class="form-control" id="cidade" type="text" name="cidade" size="25" required="required" onkeyup="apenasMaiuscula(this)" />
+     
+        <label for="estado">Estado Civil</label>
+        <select  name="sel" id="sexo"> 
+                    <option value=""> Escolha um Sexo !</option>
+                    <option value="mas">Masculino</option>
+                    <option value="al">Feminino</option>
+         </select>
+    
+        <label for="fone">Telefone</label>
+        <input class="form-control" type='text' required="required" name='tel' size="15" maxlength="15" onkeypress='mascara(this,telMascara)' onblur='clearTimeout()'>
+    
+         <label for="login">E-mail(login): </label>    
+         <input class="form-control" id="email" required="required" type="email" name="login" size="35">
+        
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
